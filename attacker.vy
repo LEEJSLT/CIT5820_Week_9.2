@@ -1,4 +1,4 @@
-  interface DAO:
+interface DAO:
     def deposit() -> bool: payable
     def withdraw() -> bool: nonpayable
     def userBalances(addr: address) -> uint256: view

